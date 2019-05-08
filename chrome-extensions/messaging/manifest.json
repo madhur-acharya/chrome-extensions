@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "chrome messaging app",
+	"description": "sending messages between content scrypts, background and popup pages",
+	"version": "1.0",
+
+	"permissions": ["tabs", "storage", "activeTab"],
+	
+	"background": 
+	{
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [
+	{
+		"js": ["my_script.js"],
+		"matches": ["<all_urls>"]
+	}],
+	
+	"browser_action": 
+	{
+		"default_icon": "icon.png"
+	}
+
+
+}
